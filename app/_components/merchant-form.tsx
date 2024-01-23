@@ -130,7 +130,7 @@ export function MerchantForm() {
             <div className="flex-1 space-y-1">
               <div key={field.id} className="flex gap-1 items-center">
                 <Input
-                  maxLength={15}
+                  maxLength={20}
                   placeholder="Namn på produkten"
                   {...register(`products.${i}.name`)}
                 />
