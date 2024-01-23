@@ -18,15 +18,15 @@ export default function Home() {
           swisher
         </h1>
 
-        <P className={"text-xl"}>
+        <p className={"leading-8 tracking-wide text-xl"}>
           Swisher är en mikroapp för att skapa menyer där betalning sker genom
           Swish.
-        </P>
-        <P>
+        </p>
+        <p>
           Du kan skapa en shop och får sedan en QR-kod dina kunder kan skanna.
           Ingen registrering krävs och ditt telefonnummer sparas inte i någon
           databas.
-        </P>
+        </p>
         <details className="text-sm">
           <summary className="p-2 cursor-pointer text-right">
             Hur funkar det?
@@ -117,5 +117,3 @@ function SwishQR({ encoded = "" }) {
 function A(props: ComponentProps<typeof Link>) {
   return <Link className="underline underline-offset-2" {...props} />;
 }
-
-const P = createComponent("p", tv({ base: "leading-8 tracking-wide" }));
