@@ -1,3 +1,16 @@
+# Swisher
+
+- Free
+- Open source
+- No servers or accounts
+- Works offline
+
+### Technical details
+
+- Compresses the shop configuration into a URL string using base64 + gzip
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
