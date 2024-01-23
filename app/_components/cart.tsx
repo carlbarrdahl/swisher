@@ -14,8 +14,6 @@ export function Cart({ shop }: { shop: Shop }) {
     cart.quantities
   );
 
-  console.log(totalAmount, lineItems);
-
   return (
     <>
       <ul className="flex flex-1 flex-col gap-4 overflow-y-auto h-full p-2">

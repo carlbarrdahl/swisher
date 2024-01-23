@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/Button";
-import { QR } from "./qr";
-import { headers } from "next/headers";
+import { SwishQR } from "./shop-qr";
 
 export const demoID =
   "H4sIAAAAAAAAA2WQMU7DQBBFrzKa2oWdEKS4A0sRB6CLKCbrMbJi76xmdwsS%2BQZQItFR09FwAm7CCTgCIySihGiKlea%2F%2F0baPXoaGWtsZPcATQ7QUPf5hgX6PG5YLalm82VZVpezpW2DSptdiliv93%2FVr5dnaKTrmA1oOTrtQ%2BrFW3TFKkE5Rm7BYO0deTGKRsk%2BYT1fTMXB8%2F369AG3TGeWG9YNDZB%2Bo0O1PK0%2BwkpznyDSQO0RVy3%2B667J2xRAIQxcgCj5e3tVKCZWcOLE5wTdQFuOeHrl3f5ny0f6izM9TnfTDxIv97BXAQAA";
@@ -57,11 +56,4 @@ export function ShopExamples() {
       </div>
     </>
   );
-}
-
-function SwishQR({ encoded = "" }) {
-  const host = headers().get("host");
-  const shopURL = `https://${host}/shop/${encoded}`;
-
-  return <QR className="rounded" size={300} value={shopURL} />;
 }
