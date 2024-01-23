@@ -7,7 +7,7 @@ import { useSavedShop } from "../_hooks/useSavedShop";
 import { Button } from "./ui/Button";
 import { Shop } from "./merchant-form";
 
-export function EditButton({ shop }: { shop: Shop }) {
+export function ShopHeader({ shop, encoded }: { encoded: string; shop: Shop }) {
   const [savedShop] = useSavedShop();
 
   const isOwner = useMemo(
@@ -15,13 +15,16 @@ export function EditButton({ shop }: { shop: Shop }) {
     [shop, savedShop]
   );
 
-  if (!isOwner) return <div />;
+  if (!isOwner) return null;
 
   return (
-    <>
+    <header className="flex gap-2 items-center justify-between mb-2">
       <Button as={Link} href="/shop/new">
         ← Redigera
       </Button>
-    </>
+      <Button as={Link} href={`/shop/${encoded}/qr`} target="_blank">
+        Visa QR
+      </Button>
+    </header>
   );
 }

@@ -2,6 +2,8 @@ import { Button } from "./ui/Button";
 
 export function SwishPay(props: SwishInput & { disabled?: boolean }) {
   const link = createSwishLink(props);
+
+  console.log(link);
   return (
     <Button variant="primary" onClick={() => window.open(link)} {...props}>
       Betala med Swish
@@ -22,8 +24,8 @@ function createSwishLink({ amount, currency, number, message }: SwishInput) {
     sw: number,
     amt: String(amount),
     cur: currency ?? "sek",
-    msg: message ?? "",
-    edit: "amt,msg",
+    // msg: message ?? "",
+    // edit: "amt,msg",
     src: "qr",
   }).toString();
 
