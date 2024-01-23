@@ -15,6 +15,7 @@ export function Cart({ shop }: { shop: Shop }) {
   );
 
   console.log(totalAmount, lineItems);
+
   return (
     <>
       <ul className="flex flex-1 flex-col gap-4 overflow-y-auto h-full p-2">
@@ -81,6 +82,7 @@ export function Cart({ shop }: { shop: Shop }) {
           disabled={!totalAmount}
           amount={totalAmount!}
           number={shop.number!}
+          lineItems={lineItems}
         />
       </div>
     </>
