@@ -1,7 +1,7 @@
 import { QR } from "./qr";
 import { headers } from "next/headers";
 
-export function SwishQR({ encoded = "" }) {
+export function ShopQR({ encoded = "" }) {
   const host = headers().get("host");
   const shopURL = `https://${host}/shop/${encoded}`;
 
