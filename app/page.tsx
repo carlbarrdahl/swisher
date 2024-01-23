@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "./_components/ui/Button";
 
 const demoURL =
@@ -9,18 +10,26 @@ export default function Home() {
         Swisher
       </h1>
 
-      <p className="leading-8 text-lg mb-8">
+      <p className="leading-8 text-lg mb-2">
         Swisher är en micro-app för att skapa menyer där betalning sker genom
         Swish.
       </p>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 mb-2">
         <Button variant="" as="a" href={"/shop/new"}>
           Skapa en Shop
         </Button>
         <Button variant="ghost" as={"a"} href={`/shop/${demoURL}`}>
           Visa ett exempel
         </Button>
+      </div>
+      <div className="flex justify-center">
+        <Image
+          alt="Swisher screenshot"
+          width={375}
+          height={425}
+          src={`/swisher.png`}
+        />
       </div>
     </div>
   );

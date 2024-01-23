@@ -1,4 +1,6 @@
 "use client";
+
+import clsx from "clsx";
 import { Shop } from "@/app/_components/merchant-form";
 import { Button } from "@/app/_components/ui/Button";
 import { useCart, useCartItems } from "@/app/_hooks/useCart";
@@ -46,7 +48,13 @@ export function Cart({ shop }: { shop: Shop }) {
                       −
                     </Button>
                   </div>
-                  <div className="w-4 text-center">{qty}</div>
+                  <div
+                    className={clsx("w-4 text-center", {
+                      ["font-bold"]: qty,
+                    })}
+                  >
+                    {qty}
+                  </div>
                   <div>
                     <Button
                       className="rounded-full size-10"

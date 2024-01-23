@@ -16,8 +16,8 @@ export default function ShopPage(props: { params: { encoded: string } }) {
     <>
       <div className="p-2">
         <ShopHeader shop={shop} encoded={encoded} />
-        <h1 className="text-3xl mb-2">{shop.name}</h1>
-        <p className="text-gray-800">
+        <h1 className="text-2xl mb-2">{shop.name}</h1>
+        <p className="text-gray-800 text-sm leading-6 tracking-wide">
           Välj de varor du vill köpa och tryck sedan på Betala för att öppna
           Swish-appen.
         </p>
