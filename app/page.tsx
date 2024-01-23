@@ -22,11 +22,12 @@ export default function Home() {
           Swisher är en mikroapp för att skapa menyer där betalning sker genom
           Swish.
         </p>
-        <p>
-          Du kan skapa en shop och får sedan en QR-kod dina kunder kan skanna.
-          Ingen registrering krävs och ditt telefonnummer sparas inte i någon
-          databas.
+        <p className="leading-7">
+          Enkelt skapa din shop och dela den med en QR-kod för smidig betalning.
+          Inga krångliga registreringar, och vi lagrar inte ditt telefonnummer i
+          någon databas.
         </p>
+
         <details className="text-sm">
           <summary className="p-2 cursor-pointer text-right">
             Hur funkar det?
