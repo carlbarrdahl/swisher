@@ -120,8 +120,8 @@ export function MerchantForm() {
       </div>
       <div className="overflow-auto">
         {!fields.length && (
-          <div className="flex justify-center text-sm tracking-wider text-gray-500 py-4 border rounded">
-            Skapa produkter genom att trycka på knappen + Lägg till
+          <div className="flex justify-center text-sm tracking-wider text-gray-500 p-4 border rounded">
+            Lägg till en ny produkt genom att trycka på knappen ovanför.
           </div>
         )}
         {fields.map((field, i) => (
