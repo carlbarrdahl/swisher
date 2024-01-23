@@ -33,13 +33,16 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center">
-          <Image
-            className="border rounded-2xl px-2"
-            alt="Swisher screenshot"
-            width={375}
-            height={425}
-            src={`/swisher.png`}
-          />
+          <div className="border-2 p-4 border-primary-400 rounded-2xl shadow-lg">
+            {/* <div className="bg-gradient-to-r p-0.5 rounded-2xl from-cyan-400 via-green-400  to-pink-500"> */}
+            <Image
+              className="rounded-xl"
+              alt="Swisher screenshot"
+              width={375}
+              height={425}
+              src={`/swisher.png`}
+            />
+          </div>
         </div>
 
         <footer className="pt-8 text-xs flex flex-col items-center">
