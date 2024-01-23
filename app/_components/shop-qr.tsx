@@ -1,4 +1,4 @@
-import { QR } from "./qr";
+import { QRCodeSVG } from "qrcode.react";
 import { headers } from "next/headers";
 
 export function ShopQR({ encoded = "" }) {
@@ -7,7 +7,7 @@ export function ShopQR({ encoded = "" }) {
 
   return (
     <a href={shopURL} target="_blank">
-      <QR className="rounded" size={300} value={shopURL} />
+      <QRCodeSVG className="rounded" size={300} value={shopURL} />
     </a>
   );
 }
