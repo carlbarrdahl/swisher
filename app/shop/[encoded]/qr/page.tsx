@@ -7,7 +7,7 @@ import { useMemo } from "react";
 export default function ShopPage(props: { params: { encoded: string } }) {
   const { encoded } = props.params;
   const host = headers().get("host");
-  const shopURL = `${host}/shop/${encoded}`;
+  const shopURL = `https://${host}/shop/${encoded}`;
 
   const shop: Shop = useMemo(() => decodeShop(encoded), [encoded]);
 
