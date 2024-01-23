@@ -28,8 +28,7 @@ const exampleValues = {
   products: [
     {
       name: "☕ Coffee",
-      description:
-        "Aeropressed americano and asd asd asdnas dnsad nsadakla sdasdsa ddsads",
+      description: "Aeropressed americano",
       amount: 35,
     },
     {
@@ -51,7 +50,7 @@ export function MerchantForm() {
   const router = useRouter();
   const [shop, saveShop] = useSavedShop();
 
-  const { control, register, handleSubmit } = useForm<Shop>({
+  const { control, register, reset, handleSubmit } = useForm<Shop>({
     defaultValues: shop ?? {
       products: [{ name: "" }],
     },
@@ -79,10 +78,12 @@ export function MerchantForm() {
         router.push(`/shop/${encoded}`);
       })}
     >
-      {/* <p>Fyll i namn på din shop och ditt Swish-nummer.</p> */}
+      <div className="py-8">
+        <p>Fyll i namn på din shop och ditt Swish-nummer. </p>
+      </div>
       <Input
         autoFocus
-        className="text-2xl"
+        // className="text-2xl"
         placeholder="Namn på shoppen"
         maxLength={23}
         {...register(`name`)}
@@ -105,7 +106,9 @@ export function MerchantForm() {
         />
       </div>
       <div className="flex justify-between items-center">
-        <h3 className="font-bold text-gray-600 tracking-wider">Produkter</h3>
+        <h3 className="font-semibold text-gray-600 tracking-wider">
+          Produkter
+        </h3>
         <div className="flex gap-4 justify-end items-center">
           <div className="text-sm">
             {fields.length} / {MAX_PRODUCTS}
@@ -149,15 +152,27 @@ export function MerchantForm() {
               />
             </div>
 
-            <Button type="button" onClick={() => remove(i)}>
+            <Button type="button" onClick={() => remove(i)} variant="ghost">
               &times;
             </Button>
           </div>
         ))}
       </div>
-      <div className="pt-8">
-        <Button className="w-full" variant="primary">
+      <div className="pt-8 space-y-2">
+        <Button type="submit" className="w-full" variant="primary" size="lg">
           Skapa
+        </Button>
+        <Button
+          className="w-full"
+          variant="ghost"
+          type="button"
+          onClick={() => {
+            console.log("reset");
+            if (window.confirm("Är du säker?"))
+              reset({ name: "", number: "", products: [] });
+          }}
+        >
+          Rensa
         </Button>
       </div>
     </form>

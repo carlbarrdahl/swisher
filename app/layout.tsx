@@ -15,6 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className="mx-auto max-w-screen-sm h-[calc(100dvh)] flex flex-col">
+          <div className="min-h-[2px] bg-gradient-to-r from-cyan-400 via-purple-400  to-pink-500 w-full" />
           {children}
         </main>
       </body>
