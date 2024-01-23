@@ -23,7 +23,7 @@ function createSwishLink({ amount, currency, number, message }: SwishInput) {
   const params = new URLSearchParams({
     sw: number,
     amt: String(amount),
-    cur: currency ?? "sek",
+    cur: currency ?? "SEK",
     // msg: message ?? "",
     // edit: "amt,msg",
     src: "qr",
