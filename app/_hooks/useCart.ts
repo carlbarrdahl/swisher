@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Shop } from "../_components/merchant-form";
 
 type Quantities = Record<string, number>;
+export type LineItem = { id: number; quantity: number };
 
 export function useCart() {
   const [quantities, setQuantity] = useState<Quantities>({});
@@ -22,14 +23,14 @@ export function useCartItems(
   products: Shop["products"] = [],
   quantities: Quantities = {}
 ) {
-  const lineItems = useMemo(
+  const lineItems: LineItem[] = useMemo(
     () =>
       Object.entries(quantities)
         .filter(
           ([id, quantity]) =>
-            quantity > 0 && products.find((p, i) => String(i) === id)
+            quantity > 0 && products.find((p, i) => i === Number(id))
         )
-        .map(([variantId, quantity]) => ({ variantId, quantity })),
+        .map(([id, quantity]) => ({ id: Number(id), quantity })),
     [products, quantities]
   );
 
