@@ -1,12 +1,12 @@
 # Swisher
 
-- Free
-- Open source
-- No servers or accounts
-- Works offline
+- Free & Open source
+- No accounts or databases
+- Lightning fast
 
 ### Technical details
 
+- Runs Next.js on Vercel
 - Compresses the shop configuration into a URL string using base64 + gzip
 
 ---
