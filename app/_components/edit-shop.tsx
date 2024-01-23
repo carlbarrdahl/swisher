@@ -15,11 +15,11 @@ export function EditButton({ shop }: { shop: Shop }) {
     [shop, savedShop]
   );
 
-  if (!isOwner) return null;
+  if (!isOwner) return <div />;
 
   return (
     <>
-      <Button as={Link} href="/">
+      <Button as={Link} href="/shop/new">
         ← Redigera
       </Button>
     </>
