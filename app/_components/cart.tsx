@@ -1,7 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import { Shop } from "@/app/_components/merchant-form";
+
+import type { Shop } from "@/types";
 import { Button } from "@/app/_components/ui/Button";
 import { useCart, useCartItems } from "@/app/_hooks/useCart";
 import { formatMoney } from "@/app/_utils/formatMoney";

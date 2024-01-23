@@ -1,10 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Shop } from "../_components/shop-form";
-
-type Quantities = Record<string, number>;
-export type LineItem = { id: number; quantity: number };
+import type { LineItem, Product, Quantities } from "@/types";
 
 export function useCart() {
   const [quantities, setQuantity] = useState<Quantities>({});
@@ -20,7 +17,7 @@ export function useCart() {
 }
 
 export function useCartItems(
-  products: Shop["products"] = [],
+  products: Product[] = [],
   quantities: Quantities = {}
 ) {
   const lineItems: LineItem[] = useMemo(

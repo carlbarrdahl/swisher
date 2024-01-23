@@ -1,14 +1,11 @@
-import { useMemo } from "react";
-
 import { Cart } from "@/app/_components/cart";
-import { Shop } from "@/app/_components/merchant-form";
 import { ShopHeader } from "@/app/_components/shop-header";
-import { decodeShop } from "@/app/_utils/decodeShop";
+import { useShop } from "@/app/_hooks/useShop";
 
 export default function ShopPage(props: { params: { encoded: string } }) {
   const { encoded } = props.params;
 
-  const shop: Shop = useMemo(() => decodeShop(encoded), [encoded]);
+  const shop = useShop(encoded);
 
   if (!shop) return <div>No shop found</div>;
 

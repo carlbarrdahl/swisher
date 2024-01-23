@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useMemo } from "react";
 
+import type { Shop } from "@/types";
 import { useSavedShop } from "../_hooks/useSavedShop";
 import { Button } from "./ui/Button";
-import { Shop } from "./shop-form";
 
 export function ShopHeader({ shop, encoded }: { encoded: string; shop: Shop }) {
   const [savedShop] = useSavedShop();

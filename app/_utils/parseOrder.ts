@@ -1,5 +1,5 @@
 import { customAlphabet } from "nanoid";
-import { LineItem } from "../_hooks/useCart";
+import type { LineItem } from "@/types";
 
 const ITEM_SEPARATOR = ".";
 const QTY_SEPARATOR = "-";
@@ -11,6 +11,7 @@ Max 50 characters. 0-9, a-, ö, !?(),.-:
 const swishCharacters = "0123456789abcdefghijkmnpqrtwxyz";
 
 const nanoid = customAlphabet(swishCharacters, 4);
+
 export function createOrderId() {
   return nanoid();
 }

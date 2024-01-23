@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ShopExamples } from "./_components/shop-examples";
 
 const repoURL = "https://github.com/carlbarrdahl/swisher";
+
 export default function Home() {
   return (
     <>

@@ -1,51 +1,16 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useFieldArray, useForm } from "react-hook-form";
+
+import type { Shop } from "@/types";
 import { Input } from "./ui/Form";
 import { Button } from "./ui/Button";
 import { decode, encode } from "../_utils/zip";
-import { useRouter } from "next/navigation";
 import { useSavedShop } from "../_hooks/useSavedShop";
-
-type Product = {
-  name: string;
-  description?: string;
-  amount?: number;
-};
-export type Shop = {
-  name: string;
-  number: string;
-  currency: string;
-  products: Product[];
-};
 
 const MAX_PRODUCTS = 10;
 
-const exampleValues = {
-  name: "Cozy Cup",
-  number: "0733423424",
-  currency: "SEK",
-  products: [
-    {
-      name: "☕ Coffee",
-      description: "Aeropressed americano",
-      amount: 35,
-    },
-    {
-      name: "🍵 Tea",
-      description: "Herbal tea",
-      amount: 30,
-    },
-    {
-      name: "🍌 Fruit",
-      amount: 15,
-    },
-    {
-      name: "🍰 Cake",
-      amount: 45,
-    },
-  ],
-};
 export function ShopForm() {
   const router = useRouter();
   const [shop, saveShop] = useSavedShop();
@@ -83,7 +48,6 @@ export function ShopForm() {
       </div>
       <Input
         autoFocus
-        // className="text-2xl"
         placeholder="Namn på shoppen"
         maxLength={23}
         {...register(`name`)}

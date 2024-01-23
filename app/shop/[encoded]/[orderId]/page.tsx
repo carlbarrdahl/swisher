@@ -1,11 +1,6 @@
-import { useMemo } from "react";
-
-import { Shop } from "@/app/_components/merchant-form";
-import { decodeShop } from "@/app/_utils/decodeShop";
-import { LineItem } from "@/app/_hooks/useCart";
-import { parseOrder } from "@/app/_utils/parseOrder";
 import { formatMoney } from "@/app/_utils/formatMoney";
 import { SwishPay } from "@/app/_components/swish-pay";
+import { useLineItems, useShop } from "@/app/_hooks/useShop";
 
 export default function OrderPage(props: {
   params: { encoded: string; orderId: string };
@@ -15,8 +10,8 @@ export default function OrderPage(props: {
     params: { encoded, orderId },
     searchParams: { items },
   } = props;
-  const shop: Shop = useMemo(() => decodeShop(encoded), [encoded]);
-  const lineItems: LineItem[] = useMemo(() => parseOrder(items), [items]);
+  const shop = useShop(encoded);
+  const lineItems = useLineItems(items);
 
   if (!shop) return <div>No shop found</div>;
 

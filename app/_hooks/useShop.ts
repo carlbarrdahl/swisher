@@ -1,14 +1,13 @@
 import { useMemo } from "react";
-import { Shop } from "@/app/_components/merchant-form";
-import { decode } from "@/app/_utils/zip";
+import type { LineItem, Shop } from "@/types";
+import { decodeShop } from "../_utils/decodeShop";
+import { parseOrder } from "../_utils/parseOrder";
 
 export function useShop(encoded: string) {
-  const shop: Shop = useMemo(() => {
-    try {
-      return JSON.parse(decode(encoded));
-    } catch (error) {
-      return null;
-    }
-  }, [encoded]);
+  const shop: Shop = useMemo(() => decodeShop(encoded), [encoded]);
   return shop;
+}
+export function useLineItems(items: string) {
+  const lineItems: LineItem[] = useMemo(() => parseOrder(items), [items]);
+  return lineItems;
 }

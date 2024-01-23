@@ -1,6 +1,7 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
-import { LineItem } from "../_hooks/useCart";
+
+import type { LineItem } from "@/types";
 import { Button } from "./ui/Button";
 import { formatOrder, createOrderId } from "../_utils/parseOrder";
 
