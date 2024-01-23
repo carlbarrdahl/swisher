@@ -46,7 +46,7 @@ const exampleValues = {
     },
   ],
 };
-export function MerchantForm() {
+export function ShopForm() {
   const router = useRouter();
   const [shop, saveShop] = useSavedShop();
 

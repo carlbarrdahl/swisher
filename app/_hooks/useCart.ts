@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Shop } from "../_components/merchant-form";
+import { Shop } from "../_components/shop-form";
 
 type Quantities = Record<string, number>;
 export type LineItem = { id: number; quantity: number };

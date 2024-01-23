@@ -1,5 +1,5 @@
-import { MerchantForm } from "@/app/_components/merchant-form";
+import { ShopForm } from "@/app/_components/shop-form";
 
 export default function CreateShop() {
-  return <MerchantForm />;
+  return <ShopForm />;
 }

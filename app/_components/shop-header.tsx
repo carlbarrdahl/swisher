@@ -5,7 +5,7 @@ import { useMemo } from "react";
 
 import { useSavedShop } from "../_hooks/useSavedShop";
 import { Button } from "./ui/Button";
-import { Shop } from "./merchant-form";
+import { Shop } from "./shop-form";
 
 export function ShopHeader({ shop, encoded }: { encoded: string; shop: Shop }) {
   const [savedShop] = useSavedShop();
