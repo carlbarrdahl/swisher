@@ -2,14 +2,14 @@ import { formatMoney } from "@/app/_utils/formatMoney";
 import { SwishPay } from "@/app/_components/swish-pay";
 import { useLineItems, useShop } from "@/app/_hooks/useShop";
 
-export default function OrderPage(props: {
+type Props = {
   params: { encoded: string; orderId: string };
   searchParams: { items: string };
-}) {
-  const {
-    params: { encoded, orderId },
-    searchParams: { items },
-  } = props;
+};
+export default function OrderPage({
+  params: { encoded, orderId },
+  searchParams: { items },
+}: Props) {
   const shop = useShop(encoded);
   const lineItems = useLineItems(items);
 
