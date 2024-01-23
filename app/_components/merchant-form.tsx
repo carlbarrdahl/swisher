@@ -97,7 +97,7 @@ export function MerchantForm() {
           required
         />
         <Input
-          className="w-12 text-xs"
+          className="w-12 text-xs hidden"
           value="SEK"
           {...register(`currency`)}
           disabled
@@ -110,11 +110,7 @@ export function MerchantForm() {
           <div className="text-sm">
             {fields.length} / {MAX_PRODUCTS}
           </div>
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => append({ name: "" })}
-          >
+          <Button type="button" onClick={() => append({ name: "" })}>
             + Lägg till
           </Button>
         </div>
@@ -153,7 +149,7 @@ export function MerchantForm() {
               />
             </div>
 
-            <Button type="button" variant="outline" onClick={() => remove(i)}>
+            <Button type="button" onClick={() => remove(i)}>
               &times;
             </Button>
           </div>
