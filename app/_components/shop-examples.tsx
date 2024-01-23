@@ -38,7 +38,7 @@ export function ShopExamples() {
           <a
             href={`/shop/${demoID}`}
             target="_blank"
-            className="border-2 p-4 border-primary-200 rounded-2xl shadow hover:border-primary-400 hover:shadow-xl hover:-translate-y-1 transition-all"
+            className="border-2 border-primary-200 rounded-2xl shadow hover:border-primary-400 hover:shadow-xl hover:-translate-y-1 transition-all"
           >
             <Image
               className="rounded-xl"
