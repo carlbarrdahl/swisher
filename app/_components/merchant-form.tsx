@@ -89,7 +89,13 @@ export function MerchantForm() {
       />
 
       <div className="flex gap-2">
-        <Input placeholder="0712345678" {...register(`number`)} required />
+        <Input
+          placeholder="0712345678"
+          type="tel"
+          pattern="[0-9]{10}"
+          {...register(`number`)}
+          required
+        />
         <Input
           className="w-12 text-xs"
           value="SEK"
