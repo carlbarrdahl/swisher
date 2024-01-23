@@ -119,7 +119,7 @@ export function MerchantForm() {
           </Button>
         </div>
       </div>
-      <div className="flex-1 overflow-auto">
+      <div className="overflow-auto">
         {!fields.length && (
           <div className="flex justify-center text-sm tracking-wider text-gray-500 py-4 border rounded">
             Skapa produkter genom att trycka på knappen + Lägg till
