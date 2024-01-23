@@ -23,8 +23,9 @@ export default function Home() {
             Skapa en ny Shop
           </Button>
         </div>
+
         <div className="">
-          <h3 className="text-sm tracking-wider">Exempel</h3>
+          <h3 className="text-sm tracking-wider text-gray-600">Exempel</h3>
           <div className="flex gap-1">
             <Button className="w-full" as="a" href={`/shop/${demoURL}`}>
               Café
@@ -32,19 +33,20 @@ export default function Home() {
             <Button className="w-full">Marknad</Button>
           </div>
         </div>
-        <div className="flex justify-center">
-          <div className="border-2 p-4 border-primary-400 rounded-2xl shadow-lg">
-            {/* <div className="bg-gradient-to-r p-0.5 rounded-2xl from-cyan-400 via-green-400  to-pink-500"> */}
-            <Image
-              className="rounded-xl"
-              alt="Swisher screenshot"
-              width={375}
-              height={425}
-              src={`/swisher.png`}
-            />
+        <div className="py-16">
+          <div className="flex justify-center">
+            <div className="border-2 p-4 border-primary-400 rounded-2xl shadow-lg">
+              {/* <div className="bg-gradient-to-r p-0.5 rounded-2xl from-cyan-400 via-green-400  to-pink-500"> */}
+              <Image
+                className="rounded-xl"
+                alt="Swisher screenshot"
+                width={375}
+                height={425}
+                src={`/swisher.png`}
+              />
+            </div>
           </div>
         </div>
-
         <footer className="pt-8 text-xs flex flex-col items-center">
           <div>
             Swisher är gratis &{" "}

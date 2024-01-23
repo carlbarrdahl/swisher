@@ -20,7 +20,7 @@ export function ShopHeader({ shop, encoded }: { encoded: string; shop: Shop }) {
   return (
     <header className="flex gap-2 items-center justify-between mb-2">
       <Button as={Link} href="/shop/new">
-        ← Redigera
+        ‹ Redigera
       </Button>
       <Button as={Link} href={`/shop/${encoded}/qr`} target="_blank">
         Visa QR

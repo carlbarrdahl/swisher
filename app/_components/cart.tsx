@@ -73,7 +73,7 @@ export function Cart({ shop }: { shop: Shop }) {
       <div className="flex justify-between border-t bg-white p-2">
         <div>
           <div className="text-xs uppercase tracking-widest text-gray-500">
-            Total
+            Att betala
           </div>
           <div className="text-sm">{formatMoney(totalAmount, "sek")}</div>
         </div>
