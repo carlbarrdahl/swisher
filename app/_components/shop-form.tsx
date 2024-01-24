@@ -9,7 +9,7 @@ import { Button } from "./ui/Button";
 import { decode, encode } from "../_utils/zip";
 import { useSavedShop } from "../_hooks/useSavedShop";
 
-const MAX_PRODUCTS = 10;
+const MAX_PRODUCTS = 7;
 
 export function ShopForm() {
   const router = useRouter();
