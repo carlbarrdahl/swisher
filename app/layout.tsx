@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,6 +30,7 @@ export default function RootLayout({
           <div className="min-h-[2px] bg-gradient-to-r from-cyan-400 via-purple-400  to-pink-500 w-full" />
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
