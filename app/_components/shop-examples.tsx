@@ -18,7 +18,7 @@ export function ShopExamples() {
     <>
       <div className="">
         <h3 className="text-sm tracking-wider text-gray-600">Exempel</h3>
-        <div className="flex gap-1">
+        <div className="flex gap-1 overflow-auto">
           <Button className="w-full" as="a" href={`/shop/${marketID}`}>
             🌿 Marknad
           </Button>
