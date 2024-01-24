@@ -2,8 +2,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://swisher.vercel.app"),
   title: "Swisher",
   description: "Simple menus for Swish payments",
+  applicationName: "Swisher",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Swisher", "Swish", "Open-source", "Typescript"],
+  creator: "Carl Barrdahl",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
