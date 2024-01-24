@@ -42,7 +42,7 @@ export default function Home() {
           <div>
             by:{" "}
             <A target="_blank" href="https://github.com/carlbarrdahl">
-              kaleido labs
+              zephyr valley
             </A>
           </div>
         </footer>

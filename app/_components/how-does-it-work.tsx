@@ -12,7 +12,7 @@ export function HowDoesItWork() {
       <ol className="list-disc list-inside space-y-4 mb-8">
         <li>
           Shoppens information komprimeras till en text-sträng som får plats i
-          en QR-kod.
+          en QR-kod (och webbläsarens addressfält).
         </li>
         <li>
           När koden skannas omvandlas text-strängen till ett objekt som
@@ -28,12 +28,13 @@ export function HowDoesItWork() {
           Swish-betalningen tillsammans med produkterna som valts.
         </li>
         <li>
-          Användaren navigeras till en order-bekräftelse och Shop-ägaren kan se
-          order-nummret i inkommande Swish-betalningar.
+          Användaren navigeras till en order-bekräftelse och Shop-ägaren kan
+          verifiera betalningen med order-nummret i sina inkommande
+          Swish-betalningar.
         </li>
         <li>
           <A href={repoURL} target="_blank">
-            Läs mer om de tekniska detailjerna och sidans källkod.
+            Läs mer om de tekniska detaljerna och sidans källkod.
           </A>
         </li>
       </ol>
