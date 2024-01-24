@@ -44,7 +44,7 @@ export function ShopExamples() {
               className="rounded-xl"
               alt="Swisher screenshot"
               width={375}
-              height={425}
+              height={480}
               src={`/swisher_screenshot.png`}
             />
           </a>
