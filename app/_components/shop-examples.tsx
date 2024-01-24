@@ -45,7 +45,7 @@ export function ShopExamples() {
               alt="Swisher screenshot"
               width={375}
               height={425}
-              src={`/swisher.png`}
+              src={`/swisher_screenshot.png`}
             />
           </a>
           <div className="text-sm text-gray-700 tracking-widest">
