@@ -9,8 +9,10 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  const screenshotURL =
-    "https://swisher.vercel.app/_next/image?url=%2Fswisher.png&w=750&q=100";
+  const swisherImage = await fetch(
+    new URL("../public/swisher.png", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       <div tw="bg-white w-full h-full flex p-16 justify-between">
@@ -24,7 +26,7 @@ export default async function Image() {
           {/* eslint-disable-next-line */}
           <img
             tw="border rounded-xl shadow-2xl"
-            src={screenshotURL}
+            src={swisherImage}
             width={384}
           />
         </div>

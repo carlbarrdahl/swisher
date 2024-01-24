@@ -3,16 +3,12 @@ import { Shop } from "@/types";
 import { ImageResponse } from "next/og";
 import { QRCodeSVG } from "qrcode.react";
 import { headers } from "next/headers";
+import { metadata } from "@/app/layout";
 
-// Route segment config
 export const runtime = "edge";
 
-// Image metadata
-export const alt = "About Acme";
-export const size = {
-  width: 1200,
-  height: 630,
-};
+export const alt = metadata.title;
+export const size = { width: 1200, height: 630 };
 
 export const contentType = "image/png";
 
@@ -25,18 +21,7 @@ export default async function Image(props: { params: { encoded: string } }) {
 
   return new ImageResponse(
     (
-      <div
-        tw="px-24 py-12 flex justify-between items-center"
-        style={{
-          background: "white",
-          width: "100%",
-          height: "100%",
-          display: "flex",
-        }}
-      >
-        {/* <div tw="absolute top-8 right-8 text-3xl text-center font-bold tracking-wider text-cyan-600">
-          swisher
-        </div> */}
+      <div tw="w-full h-full bg-white px-24 py-12 flex justify-between items-center">
         <div tw="flex flex-col">
           <div tw="text-[64px] mb-8">{shop.name}</div>
 
