@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://swisher.vercel.app"),
+  metadataBase: new URL("https://swisher.link"),
   title: "Swisher",
   description: "Simple menus for Swish payments",
   applicationName: "Swisher",

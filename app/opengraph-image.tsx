@@ -10,7 +10,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const screenshotURL =
-    "https://swisher.vercel.app/_next/image?url=%2Fswisher.png&w=750&q=100";
+    "https://swisher.link/_next/image?url=%2Fswisher.png&w=750&q=100";
   return new ImageResponse(
     (
       <div tw="bg-white w-full h-full flex p-16 justify-between">
